@@ -1,0 +1,8 @@
+// Para criar uma medida que calcule a soma de uma coluna filtrada por outra coluna, use a função CALCULATE e FILTER:
+Minha Medida de Soma Filtrada = CALCULATE(SUM(Tabela[Nome da Coluna]), FILTER(Tabela, Tabela[Nome da Coluna de Filtro] = "Valor de Filtro"))
+
+// Para criar uma medida que calcule a média de uma coluna ignorando filtros em outra coluna, use a função AVERAGE e ALL:
+Minha Medida de Média Ignorando Filtros = CALCULATE(AVERAGE(Tabela[Nome da Coluna]), ALL(Tabela[Nome da Coluna de Filtro]))
+
+// Para criar uma medida que calcule a contagem de valores distintos em uma coluna filtrada por outra coluna, use a função DISTINCTCOUNT e FILTER:
+Minha Medida de Contagem Distinta Filtrada = CALCULATE(DISTINCTCOUNT(Tabela[Nome da Coluna]), FILTER(Tabela, Tabela[Nome da Coluna de Filtro] = "Valor de Filtro"))

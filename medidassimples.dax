@@ -1,0 +1,8 @@
+// Para criar uma medida de soma, use a função SUM:
+Minha Medida de Soma = SUM(Tabela[Nome da Coluna])
+
+// Para criar uma medida de média, use a função AVERAGE:
+Minha Medida de Média = AVERAGE(Tabela[Nome da Coluna])
+
+// Para criar uma medida de contagem, use a função COUNT:
+Minha Medida de Contagem = COUNT(Tabela[Nome da Coluna])

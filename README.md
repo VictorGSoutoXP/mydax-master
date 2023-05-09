@@ -14,19 +14,19 @@
 
 ## Desafiios em DAX
 
-1. Criação de medidas simples: comece criando medidas básicas como soma, média e contagem para entender a sintaxe e as funcionalidades do DAX.
+1. Criação de medidas simples: comece criando medidas básicas como soma, média e contagem para entender a sintaxe e as funcionalidades do DAX. **OK**
 
-2. Criação de medidas avançadas: avance para criar medidas mais complexas usando funções DAX como CALCULATE, FILTER, ALL e outras funções de agregação.
+2. Criação de medidas avançadas: avance para criar medidas mais complexas usando funções DAX como CALCULATE, FILTER, ALL e outras funções de agregação. **OK**
 
-3. Criação de colunas calculadas: crie colunas calculadas em suas tabelas usando a linguagem DAX para adicionar informações adicionais aos seus modelos de dados.
+3. Criação de colunas calculadas: crie colunas calculadas em suas tabelas usando a linguagem DAX para adicionar informações adicionais aos seus modelos de dados. **OK**
 
-4. Criação de hierarquias: crie hierarquias em suas tabelas usando funções DAX como PATH e HIERARCHY para permitir a análise de dados em diferentes níveis de granularidade.
+4. Criação de hierarquias: crie hierarquias em suas tabelas usando funções DAX como PATH e HIERARCHY para permitir a análise de dados em diferentes níveis de granularidade. **OK**
 
-5. Trabalhar com relacionamentos: crie relacionamentos entre tabelas em seus modelos de dados e use funções DAX como RELATED, RELATEDTABLE e CROSSFILTER para acessar dados em tabelas relacionadas.
+5. Trabalhar com relacionamentos: crie relacionamentos entre tabelas em seus modelos de dados e use funções DAX como RELATED, RELATEDTABLE e CROSSFILTER para acessar dados em tabelas relacionadas. **OK**
 
-6. Otimização de desempenho: teste a otimização de desempenho de seus modelos de dados usando funções DAX como SUMMARIZE, GROUPBY e outras funções de resumo.
+6. Otimização de desempenho: teste a otimização de desempenho de seus modelos de dados usando funções DAX como SUMMARIZE, GROUPBY e outras funções de resumo. **OK**
 
-7. Criação de testes de unidade: crie testes de unidade automatizados para garantir que suas medidas e colunas calculadas estejam funcionando corretamente em diferentes cenários.
+7. Criação de testes de unidade: crie testes de unidade automatizados para garantir que suas medidas e colunas calculadas estejam funcionando corretamente em diferentes cenários. **OK**
 
 8. Criação de gráficos e visualizações: crie gráficos e visualizações usando o Power BI ou outras ferramentas de visualização de dados para analisar e apresentar seus dados de forma eficaz.
 

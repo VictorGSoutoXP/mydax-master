@@ -1,0 +1,21 @@
+// Suponha que você tenha duas tabelas, "Vendas" e "Produtos", e elas são relacionadas pela coluna "IDProduto". Para criar o relacionamento, você pode usar a seguinte sintaxe:
+Relacionamento = 
+    ADDRELATIONSHIP(
+        Vendas[IDProduto],
+        Produtos[IDProduto],
+        CROSSFILTER(BOTH)
+    )
+// A função ADDRELATIONSHIP cria um relacionamento entre as colunas especificadas (no caso, "IDProduto" nas tabelas "Vendas" e "Produtos"). A função CROSSFILTER especifica como as informações devem ser filtradas quando são acessadas a partir de tabelas relacionadas. Neste exemplo, o parâmetro "BOTH" indica que as informações devem ser filtradas em ambas as direções.
+
+// Depois de criar o relacionamento, você pode usar funções DAX como RELATED e RELATEDTABLE para acessar dados em tabelas relacionadas. Por exemplo, para criar uma medida que calcule a quantidade total de vendas por produto, você pode usar o seguinte código:
+
+QuantidadeTotalVendas = 
+    SUM(Vendas[Quantidade])
+
+// Essa medida calcula a soma da coluna "Quantidade" na tabela "Vendas". No entanto, se você quiser calcular a quantidade total de vendas por produto, precisará usar a função RELATED para acessar os dados na tabela "Produtos":
+
+QuantidadeTotalVendasPorProduto = 
+    SUM(Vendas[Quantidade]) *
+    RELATED(Produtos[Preco])
+
+// Neste exemplo, a função RELATED é usada para acessar a coluna "Preco" na tabela "Produtos". O resultado é multiplicado pela soma da coluna "Quantidade" na tabela "Vendas", resultando na quantidade total de vendas por produto.

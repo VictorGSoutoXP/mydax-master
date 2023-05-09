@@ -1,0 +1,47 @@
+//  testes de unidade automatizados para suas medidas e colunas calculadas:
+
+// Defina a tabela de entrada para o teste
+TabelaDeTeste = 
+    DATATABLE(
+        "Coluna1", INTEGER,
+        "Coluna2", INTEGER,
+        {
+            {1, 2},
+            {3, 4},
+            {5, 6},
+            {7, 8}
+        }
+    )
+
+// Defina a medida a ser testada
+MinhaMedida = 
+    SUM(TabelaDeTeste[Coluna1]) + SUM(TabelaDeTeste[Coluna2])
+
+// Defina os resultados esperados para cada cenário de teste
+ResultadosEsperados = 
+    DATATABLE(
+        "CenarioDeTeste", STRING,
+        "ResultadoEsperado", INTEGER,
+        {
+            {"Cenario 1", 18},
+            {"Cenario 2", 20},
+            {"Cenario 3", 22},
+            {"Cenario 4", 24}
+        }
+    )
+
+// Crie um teste de unidade para cada cenário de teste
+FOR EACHROW(ResultadosEsperados, "Teste de Unidade",
+    VAR CenarioDeTeste = ResultadosEsperados[CenarioDeTeste]
+    VAR ResultadoEsperado = ResultadosEsperados[ResultadoEsperado]
+    VAR ResultadoObtido = CALCULATE(MinhaMedida, TabelaDeTeste)
+
+    RETURN
+        ASSERT(ResultadoObtido = ResultadoEsperado, CenarioDeTeste)
+)
+
+// Neste exemplo, estamos testando a medida "MinhaMedida", que é definida como a soma das colunas "Coluna1" e "Coluna2" na tabela "TabelaDeTeste". Definimos os resultados esperados para quatro cenários de teste diferentes e criamos um teste de unidade para cada cenário usando a função FOR EACHROW.
+
+// Dentro de cada teste de unidade, definimos as variáveis CenarioDeTeste, ResultadoEsperado e ResultadoObtido. A variável CenarioDeTeste é usada para identificar o cenário de teste atual, a variável ResultadoEsperado contém o resultado esperado para o cenário de teste e a variável ResultadoObtido usa a função CALCULATE para calcular o resultado real da medida para a tabela de entrada.
+
+// Por fim, usamos a função ASSERT para comparar o resultado obtido com o resultado esperado e gerar uma mensagem de erro se houver uma discrepância. O argumento opcional "Teste de Unidade" é usado para fornecer um nome para o teste que aparecerá nos resultados do teste.

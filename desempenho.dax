@@ -1,0 +1,19 @@
+// Suponha que você tenha uma tabela de vendas com milhões de registros e deseja criar uma medida que calcule a quantidade total de vendas por categoria de produto. Uma maneira simples de fazer isso seria usar a função SUM para somar a coluna "Quantidade" na tabela "Vendas", mas isso pode ser lento e consumir muitos recursos. Uma abordagem mais eficiente seria usar a função SUMMARIZE para agrupar os dados por categoria de produto e, em seguida, usar a função SUM para calcular a quantidade total de vendas em cada categoria. Aqui está um exemplo de código:
+VendasPorCategoria = 
+    SUMMARIZE(
+        Produtos,
+        Produtos[Categoria],
+        "QuantidadeTotalVendas", SUM(Vendas[Quantidade])
+    )
+// Neste exemplo, a função SUMMARIZE agrupa os dados na tabela "Produtos" por categoria e cria uma nova tabela resumida que contém uma linha para cada categoria, bem como a quantidade total de vendas em cada categoria. A função SUM é usada para calcular a quantidade total de vendas para cada categoria.
+
+// Você também pode usar a função GROUPBY para obter o mesmo resultado. A função GROUPBY é semelhante à função SUMMARIZE, mas oferece mais flexibilidade para criar agregações personalizadas. Aqui está um exemplo de código que usa a função GROUPBY para calcular a quantidade total de vendas por categoria de produto:
+
+VendasPorCategoria = 
+    GROUPBY(
+        Produtos,
+        Produtos[Categoria],
+        "QuantidadeTotalVendas", SUM(Vendas[Quantidade])
+    )
+
+// Neste exemplo, a função GROUPBY agrupa os dados na tabela "Produtos" por categoria e cria uma nova tabela que contém uma linha para cada categoria, bem como a quantidade total de vendas em cada categoria. A função SUM é usada para calcular a quantidade total de vendas para cada categoria, assim como na função SUMMARIZE.

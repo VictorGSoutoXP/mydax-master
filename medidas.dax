@@ -1,0 +1,8 @@
+// Criação da medida:
+Total Sales = SUM(Sales[Amount])
+// Criação do gráfico de barras:
+
+// Selecione o tipo de visualização "Barras agrupadas".
+// Arraste a coluna "Category" para o eixo de categoria.
+// Arraste a medida "Total Sales" para o eixo de valores.
+// O gráfico de barras será criado automaticamente.

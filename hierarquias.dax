@@ -1,0 +1,13 @@
+Vendas Hierarquia = 
+HIERARCHY(
+    Vendas,
+    PATH(
+        Vendas[Data].[Ano],
+        Vendas[Data].[Mês],
+        Vendas[Data].[Dia]
+    )
+)
+
+// para a criação de hierarquias em suas tabelas usando as funções PATH e HIERARCHY:
+
+// Suponha que você tenha uma tabela "Vendas" com as seguintes colunas: "Data", "Produto", "Região" e "Valor". Você pode criar uma hierarquia que permita a análise de dados em diferentes níveis de granularidade (por exemplo, ano-mês-dia) usando o seguinte código:
